@@ -1,0 +1,46 @@
+pipeline {
+          agent any
+          stages {
+                    stage('Initializtion')
+                      {
+                        steps
+                          {
+                            echo 'Initializtion work'
+                          }
+                      }
+                      
+                      stage('Build')
+                      {
+                        steps
+                          {
+                            echo 'Building and Packaging the Webapp'
+                          }
+                      }
+                      stage('Deploy to DEv-Testing')
+                        {
+                          steps
+                            {
+                              echo 'Deploy to Development Testing'
+                            }
+                        }
+                      stage('SAST')
+                         {
+                            steps
+                            {
+                              echo 'SAST '
+                            }
+                          }
+                          
+                       stage('Security Test')
+                        {
+                          steps
+                          {
+                            echo 'Security Test uisng Appscan..'
+                          }
+                        }
+                          
+
+                 }
+
+
+         }
